@@ -1,0 +1,170 @@
+/* Definições Gerais e Paleta de Cores de Luxo */
+:root {
+    --bg-dark: #0d0e10;       
+    --card-bg: #16181c;      
+    --gold: #d4af37;         
+    --gold-hover: #f3e5ab;   
+    --text-main: #f5f5f7;    
+    --text-muted: #86868b;   
+}
+
+/* Reset e Base */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Evita que o conteúdo estique no PC */
+}
+
+/* Container focado para dispositivos móveis (Perfeito tanto no Monitor quanto no Celular) */
+.mobile-container {
+    max-width: 400px; /* Reduzi para 400px para o botão não ficar esticado em telas maiores */
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 24px 40px 24px; /* Espaçamento superior e inferior generoso */
+    display: flex;
+    flex-column: vertical;
+    flex-direction: column;
+    justify-content: space-between; /* Mantém o footer na base de forma limpa */
+    box-sizing: border-box;
+}
+
+/* Agrupador do topo */
+.content-wrapper {
+    width: 100%;
+}
+
+/* Estilização da Logo */
+.logo-wrapper {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.25); 
+    padding: 4px;
+    background: linear-gradient(145deg, #16181c, #0d0e10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Títulos */
+.brand-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.brand-subtitle {
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--text-muted);
+    max-width: 90%;
+    margin: 0 auto 40px auto; /* Espaço elegante antes do botão */
+}
+
+/* Seção de Links */
+.links-section {
+    width: 100%;
+}
+
+/* Botões Estilo Luxo */
+.btn-luxury {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 18px 22px; /* Botão ligeiramente mais robusto e imponente */
+    border-radius: 12px; /* Cantos um pouco mais suaves */
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Ícones dentro do botão */
+.btn-icon {
+    font-size: 1.35rem;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+}
+
+.btn-text {
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 16px;
+}
+
+.btn-arrow {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito Hover */
+.btn-luxury:hover {
+    background-color: #1a1c21;
+    color: var(--gold-hover);
+    border-color: rgba(212, 175, 55, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.06);
+}
+
+.btn-luxury:hover .btn-arrow {
+    transform: translateX(4px);
+    color: var(--gold-hover);
+}
+
+/* Destaque sutil para o botão da Shopee */
+.custom-btn-shopee {
+    border-left: 3px solid var(--gold);
+}
+
+/* Redes Sociais no Rodapé */
+.social-icons {
+    margin-top: 40px;
+}
+
+.social-link {
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    margin: 0 14px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.social-link:hover {
+    color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.footer-text {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+    margin: 0;
+}
