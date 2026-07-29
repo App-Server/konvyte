@@ -1,170 +1,250 @@
-/* Definições Gerais e Paleta de Cores de Luxo */
-:root {
-    --bg-dark: #0d0e10;       
-    --card-bg: #16181c;      
-    --gold: #d4af37;         
-    --gold-hover: #f3e5ab;   
-    --text-main: #f5f5f7;    
-    --text-muted: #86868b;   
+:root{
+    --gold:#d4af37;
+    --gold-light:#f7dd88;
+    --dark:#050505;
+    --card:#0d0d0d;
+    --border:rgba(212,175,55,.15);
+    --text:#ffffff;
+    --muted:#a6a6a6;
 }
 
-/* Reset e Base */
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: 'Inter', sans-serif;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Evita que o conteúdo estique no PC */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* Container focado para dispositivos móveis (Perfeito tanto no Monitor quanto no Celular) */
-.mobile-container {
-    max-width: 400px; /* Reduzi para 400px para o botão não ficar esticado em telas maiores */
-    width: 100%;
-    min-height: 100vh;
-    padding: 60px 24px 40px 24px; /* Espaçamento superior e inferior generoso */
-    display: flex;
-    flex-column: vertical;
-    flex-direction: column;
-    justify-content: space-between; /* Mantém o footer na base de forma limpa */
-    box-sizing: border-box;
+body{
+    background:#050505;
+    color:white;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
 }
 
-/* Agrupador do topo */
-.content-wrapper {
-    width: 100%;
+.bg-glow{
+    position:fixed;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:700px;
+    height:500px;
+    background:radial-gradient(circle,
+    rgba(212,175,55,.12),
+    transparent 70%);
+    pointer-events:none;
 }
 
-/* Estilização da Logo */
-.logo-wrapper {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 20px auto;
-    border-radius: 50%;
-    border: 1px solid rgba(212, 175, 55, 0.25); 
-    padding: 4px;
-    background: linear-gradient(145deg, #16181c, #0d0e10);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+.hero{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:80px 20px 60px;
 }
 
-.logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+.logo-container{
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:50%;
+    overflow:hidden;
+    border:1px solid rgba(212,175,55,.3);
+    margin-bottom:30px;
 }
 
-/* Títulos */
-.brand-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: var(--text-main);
-    margin-bottom: 8px;
+.logo-container img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.brand-subtitle {
-    font-size: 0.88rem;
-    font-weight: 300;
-    line-height: 1.5;
-    color: var(--text-muted);
-    max-width: 90%;
-    margin: 0 auto 40px auto; /* Espaço elegante antes do botão */
+.badge-premium{
+    display:inline-block;
+    padding:10px 18px;
+    border:1px solid rgba(212,175,55,.3);
+    border-radius:50px;
+    color:var(--gold);
+    font-size:.8rem;
+    letter-spacing:2px;
+    margin-bottom:25px;
 }
 
-/* Seção de Links */
-.links-section {
-    width: 100%;
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    font-weight:600;
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
-/* Botões Estilo Luxo */
-.btn-luxury {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--card-bg);
-    color: var(--text-main);
-    text-decoration: none;
-    padding: 18px 22px; /* Botão ligeiramente mais robusto e imponente */
-    border-radius: 12px; /* Cantos um pouco mais suaves */
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:var(--muted);
+    line-height:1.8;
+    font-size:1.05rem;
 }
 
-/* Ícones dentro do botão */
-.btn-icon {
-    font-size: 1.35rem;
-    color: var(--gold);
-    display: flex;
-    align-items: center;
+.partners{
+    max-width:1400px;
+    margin:auto;
+    padding:50px 20px 100px;
 }
 
-.btn-text {
-    font-size: 0.95rem;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    flex-grow: 1;
-    text-align: left;
-    padding-left: 16px;
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
 }
 
-.btn-arrow {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    transition: transform 0.3s ease;
+.section-header span{
+    color:var(--gold);
+    letter-spacing:3px;
+    font-size:.8rem;
 }
 
-/* Efeito Hover */
-.btn-luxury:hover {
-    background-color: #1a1c21;
-    color: var(--gold-hover);
-    border-color: rgba(212, 175, 55, 0.35);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.06);
+.section-header h2{
+    margin-top:15px;
+    font-size:3rem;
+    font-family:'Cormorant Garamond',serif;
 }
 
-.btn-luxury:hover .btn-arrow {
-    transform: translateX(4px);
-    color: var(--gold-hover);
+.cards-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
 }
 
-/* Destaque sutil para o botão da Shopee */
-.custom-btn-shopee {
-    border-left: 3px solid var(--gold);
+.card{
+    background:rgba(255,255,255,.02);
+    border:1px solid var(--border);
+    border-radius:24px;
+    overflow:hidden;
+    transition:.4s;
+    backdrop-filter:blur(15px);
 }
 
-/* Redes Sociais no Rodapé */
-.social-icons {
-    margin-top: 40px;
+.card:hover{
+    transform:translateY(-10px);
+    border-color:var(--gold);
+    box-shadow:0 20px 60px rgba(212,175,55,.15);
 }
 
-.social-link {
-    color: var(--text-muted);
-    font-size: 1.3rem;
-    margin: 0 14px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
+.card-image{
+    height:220px;
+    overflow:hidden;
 }
 
-.social-link:hover {
-    color: var(--gold);
-    transform: translateY(-2px);
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
 }
 
-.footer-text {
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    letter-spacing: 0.3px;
-    margin: 0;
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.card-content{
+    padding:28px;
+}
+
+.icon-circle{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:1px solid rgba(212,175,55,.3);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-size:1.4rem;
+    margin-bottom:20px;
+}
+
+.card-content h3{
+    font-size:1.7rem;
+    font-family:'Cormorant Garamond',serif;
+    margin-bottom:12px;
+}
+
+.card-content p{
+    color:var(--muted);
+    line-height:1.8;
+    min-height:90px;
+}
+
+.card-content a{
+    margin-top:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    width:100%;
+
+    padding:14px 20px;
+
+    background:linear-gradient(
+        135deg,
+        #d4af37,
+        #f7dd88
+    );
+
+    color:#111;
+    text-decoration:none;
+
+    border-radius:12px;
+
+    font-weight:700;
+    font-size:.95rem;
+
+    transition:.3s ease;
+}
+
+.card-content a:hover{
+    transform:translateY(-2px);
+    box-shadow:
+    0 10px 30px rgba(212,175,55,.35);
+}
+
+.card-content a i{
+    transition:.3s;
+}
+
+.card-content a:hover i{
+    transform:translateX(4px);
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+footer p{
+    color:#888;
+}
+
+@media(max-width:1200px){
+
+    .cards-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .section-header h2{
+        font-size:2.2rem;
+    }
+
+    .cards-grid{
+        grid-template-columns:1fr;
+    }
+
 }
